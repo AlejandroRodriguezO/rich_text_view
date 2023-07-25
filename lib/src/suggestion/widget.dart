@@ -53,6 +53,7 @@ class SearchItemWidget extends StatelessWidget {
                 thickness: 3,
                 child: state.last.startsWith(suggestionController.mentionSymbol)
                     ? ListView.builder(
+                        reverse: true,
                         itemCount: state.mentions.length,
                         itemBuilder: (context, index) {
                           var mention = state.mentions[index];

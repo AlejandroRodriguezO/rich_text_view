@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        backgroundColor: Colors.red,
         appBar: AppBar(
           title: Text('Flutter RichTextView'),
         ),
@@ -72,7 +71,7 @@ class MyApp extends StatelessWidget {
                     ),
                     suggestionController: SuggestionController(
                       mentionSymbol: '/',
-                      position: SuggestionPosition.bottom,
+                      position: SuggestionPosition.top,
                       mentionSuggestions: [
                         Mention(
                             imageURL: 'imageURL',
