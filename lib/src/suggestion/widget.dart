@@ -28,15 +28,18 @@ class SearchItemWidget extends StatelessWidget {
           minWidth: double.infinity,
         ),
         decoration: BoxDecoration(
+            color: state.loading || state.mentions.isNotEmpty
+                ? Theme.of(context).cardColor
+                : Colors.transparent,
             border: Border(
-          top: suggestionController.position == SuggestionPosition.top &&
-                  state.suggestionHeight > 1.0
-              ? border
-              : BorderSide.none,
-          left: border,
-          right: border,
-          bottom: border,
-        )),
+              top: suggestionController.position == SuggestionPosition.top &&
+                      state.suggestionHeight > 1.0
+                  ? border
+                  : BorderSide.none,
+              left: border,
+              right: border,
+              bottom: border,
+            )),
         child: state.loading
             ? Padding(
                 padding: EdgeInsets.symmetric(vertical: 20),

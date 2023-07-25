@@ -11,9 +11,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
+        backgroundColor: Colors.red,
         appBar: AppBar(
           title: Text('Flutter RichTextView'),
         ),
@@ -66,8 +68,7 @@ class MyApp extends StatelessWidget {
                 width: 300,
                 child: RichTextEditor(
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(16)),
+                      border: InputBorder.none,
                     ),
                     suggestionController: SuggestionController(
                       mentionSymbol: '/',
